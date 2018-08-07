@@ -21,6 +21,7 @@ extension UIButton {
         titleLabel?.font = UIFont.systemFont(ofSize: 15)
         setTitleColor(UIColor(red: 0, green: 0, blue: 0, alpha: 0.9), for: .normal)
     }
+    
     func applyGradientStyle(colorOne: UIColor, colorTwo: UIColor) {
         layer.cornerRadius = 8
         layer.shadowColor = UIColor.black.cgColor
@@ -28,6 +29,7 @@ extension UIButton {
         layer.shadowOffset = CGSize(width: 0, height: 15)
         layer.shadowRadius = 8
         setTitleColor(UIColor.white, for: .normal)
+        titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = bounds

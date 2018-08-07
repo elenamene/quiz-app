@@ -77,7 +77,7 @@ class ViewController: UIViewController {
         // Reset game manager properties to 0
         gameManager.correctQuestions = 0
         gameManager.questionsAsked = 0
-        
+       
         // call next round
         nextRound()
     }
@@ -182,7 +182,6 @@ class ViewController: UIViewController {
         displayQuestion()
         
         // Buttons styles
-        resetButtonsStyle()
         playAgainButton.applyGradientStyle(colorOne: UIColor(red:0.00, green:0.87, blue:0.84, alpha:0.5), colorTwo: UIColor(red:0.00, green:0.78, blue:0.90, alpha:1.0))
         
         // Header style

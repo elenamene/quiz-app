@@ -67,26 +67,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yNC-19-Ett">
                                 <rect key="frame" x="0.0" y="267" width="375" height="400"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLq-Y7-H3i">
-                                        <rect key="frame" x="16" y="172" width="343" height="56"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="MV6-jA-cDa"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                        <state key="normal" title="Play Again"/>
-                                        <connections>
-                                            <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TvB-M8-lt8"/>
-                                        </connections>
-                                    </button>
-                                    <progressView opaque="NO" contentMode="center" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="owL-LB-fQn">
-                                        <rect key="frame" x="0.0" y="-3" width="375" height="9"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="8" id="qGF-QH-9O3"/>
-                                        </constraints>
-                                        <color key="progressTintColor" red="0.0" green="0.89803922179999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </progressView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lcr-Ot-OqI">
-                                        <rect key="frame" x="18" y="40.5" width="339" height="320.5"/>
+                                        <rect key="frame" x="18" y="40" width="339" height="320.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhJ-kO-YKZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="339" height="65"/>
@@ -122,6 +104,25 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <progressView opaque="NO" contentMode="center" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="owL-LB-fQn">
+                                        <rect key="frame" x="0.0" y="-3" width="375" height="9"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="8" id="qGF-QH-9O3"/>
+                                        </constraints>
+                                        <color key="progressTintColor" red="0.0" green="0.89803922179999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </progressView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLq-Y7-H3i">
+                                        <rect key="frame" x="16" y="172" width="343" height="56"/>
+                                        <color key="backgroundColor" red="0.30196079609999998" green="0.8156862855" blue="0.88235294819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="MV6-jA-cDa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Play Again"/>
+                                        <connections>
+                                            <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rrZ-mX-p37"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
