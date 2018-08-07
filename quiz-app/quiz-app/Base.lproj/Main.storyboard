@@ -31,7 +31,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UX Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIa-ad-Zav">
                                                         <rect key="frame" x="0.0" y="0.0" width="91.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -158,7 +158,7 @@
                         <outlet property="option3Button" destination="JP9-iV-twW" id="Jbg-5i-kD5"/>
                         <outlet property="option4Button" destination="TeD-2F-x7R" id="odd-eg-uhk"/>
                         <outlet property="playAgainButton" destination="WLq-Y7-H3i" id="ZdU-Hi-na2"/>
-                        <outlet property="progressBarTimer" destination="owL-LB-fQn" id="8PN-BN-oOX"/>
+                        <outlet property="progressBar" destination="owL-LB-fQn" id="1Gr-WR-xVh"/>
                         <outlet property="questionField" destination="t61-hM-hUE" id="k7Z-Bs-opy"/>
                         <outlet property="questionTracker" destination="z1S-oU-XTs" id="709-G4-VE4"/>
                     </connections>

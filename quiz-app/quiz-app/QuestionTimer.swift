@@ -10,28 +10,28 @@ import Foundation
 
 class questionTimer {
     var timer = Timer()
-    var secondsPerQuestion: Float = 15
-    var timerIsOn = false
+    var secondsRemaining: Float = 15
+    var isOn = false
     
     func start() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
-        timerIsOn = true
+        isOn = true
         print("time started")
     }
     
     @objc func updateCounter() {
-        secondsPerQuestion -= 1
-        print(secondsPerQuestion)
-        if secondsPerQuestion == 0 {
+        secondsRemaining -= 1
+        print(secondsRemaining)
+        if secondsRemaining == 0 {
             timer.invalidate()
             print("time over")
         }
     }
     
     func reset() {
-        secondsPerQuestion = 15
+        secondsRemaining = 15
         timer.invalidate()
-        timerIsOn = false
+        isOn = false
         print("time stopped")
     }
 }

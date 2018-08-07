@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var header: UIView!
-    @IBOutlet weak var progressBarTimer: UIProgressView!
+    @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var questionTracker: UILabel!
     @IBOutlet weak var questionField: UILabel!
     @IBOutlet weak var option1Button: UIButton!
@@ -142,7 +142,7 @@ class ViewController: UIViewController {
         
         // Start timer
         timer.start()
-        print(timer.secondsPerQuestion)
+        print(timer.secondsRemaining)
     }
     
     func displayScore() {
@@ -190,12 +190,12 @@ class ViewController: UIViewController {
         questionTracker.text = "Question \(gameManager.questionsAsked) of \(gameManager.questionsPerRound)"
         
         // Progress bar
-        if timer.timerIsOn {
-            progressBarTimer.isHidden = false
-            progressBarTimer.setProgress(timer.secondsPerQuestion, animated: true)
+        if timer.isOn {
+            progressBar.isHidden = false
+            progressBar.setProgress(timer.secondsRemaining, animated: true)
         } else {
-            progressBarTimer.setProgress(0, animated: false)
-            progressBarTimer.isHidden = true
+            progressBar.setProgress(0, animated: false)
+            progressBar.isHidden = true
         }
         
     }
