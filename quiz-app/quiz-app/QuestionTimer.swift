@@ -24,7 +24,7 @@ class questionTimer {
         print(secondsRemaining)
         if secondsRemaining == 0 {
             timer.invalidate()
-            print("time over")
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "timeOver"), object: nil)
         }
     }
     
@@ -33,5 +33,6 @@ class questionTimer {
         timer.invalidate()
         isOn = false
         print("time stopped")
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "timeReset"), object: nil)
     }
 }

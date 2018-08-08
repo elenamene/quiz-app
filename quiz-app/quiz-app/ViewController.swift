@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import AudioToolbox
+
+// global properties
+// let timeOverNotificationKey = "questionTimeOver"
 
 class ViewController: UIViewController {
     
@@ -15,6 +19,12 @@ class ViewController: UIViewController {
     let gameManager = GameManager()
     let timer = questionTimer()
     var buttons = [UIButton]()
+    
+    var gameSound: SystemSoundID = 0
+    var correctSound: SystemSoundID = 0
+    var wrongSound: SystemSoundID = 0
+    var cheeringSound: SystemSoundID = 0
+    var timeOutSound: SystemSoundID = 0
     
     // MARK: - Outlets
     
@@ -46,24 +56,16 @@ class ViewController: UIViewController {
         // Check the answer selected and display feedback
         if gameManager.isCorrect(sender.tag) {
             questionField.text = "Correct! 🎉"
+            playCorrectSound()
             sender.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
         } else {
             questionField.text = "Sorry, that's not it. 😬"
+            
             // highlight wrong answer
             sender.layer.borderColor = UIColor(red:0.96, green:0.35, blue:0.57, alpha:1.0).cgColor
+            
             // Highlight correct answer
-            let correctAnswer = self.gameManager.quiz.questions[self.gameManager.indexOfSelectedQuestion].correctAnswer
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.4) {
-                // Find the button with the correct answer
-                for button in self.buttons {
-                    if button.tag == correctAnswer - 1 {
-                        // Correct answer button style
-                        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
-                        button.layer.borderColor = UIColor(red: 0.3137, green: 0.8471, blue: 0.5451, alpha: 1.0).cgColor
-                        button.layer.borderWidth = 2
-                    }
-                }
-            }
+            highlightCorrectQuestion()
         }
         
         // reset timer
@@ -80,9 +82,62 @@ class ViewController: UIViewController {
        
         // call next round
         nextRound()
+        
+        // play sound
+        playGameStartSound()
     }
     
     // MARK: - Helpers
+    
+    func loadGameStartSound() {
+        let path = Bundle.main.path(forResource: "GameSound", ofType: "wav")
+        let soundUrl = URL(fileURLWithPath: path!)
+        AudioServicesCreateSystemSoundID(soundUrl as CFURL, &gameSound)
+    }
+    
+    func playGameStartSound() {
+        AudioServicesPlaySystemSound(gameSound)
+    }
+    
+    func loadCorrectSound() {
+        let path = Bundle.main.path(forResource: "soundCorrect", ofType: "wav")
+        let soundUrl = URL(fileURLWithPath: path!)
+        AudioServicesCreateSystemSoundID(soundUrl as CFURL, &correctSound)
+    }
+    
+    func playCorrectSound() {
+        AudioServicesPlaySystemSound(correctSound)
+    }
+    
+    func loadWrongSound() {
+        let path = Bundle.main.path(forResource: "soundWrong", ofType: "wav")
+        let soundUrl = URL(fileURLWithPath: path!)
+        AudioServicesCreateSystemSoundID(soundUrl as CFURL, &wrongSound)
+    }
+    
+    func playWrongSound() {
+        AudioServicesPlaySystemSound(wrongSound)
+    }
+    
+    func loadCheeringSound() {
+        let path = Bundle.main.path(forResource: "cheerCrowd", ofType: "mp3")
+        let soundUrl = URL(fileURLWithPath: path!)
+        AudioServicesCreateSystemSoundID(soundUrl as CFURL, &cheeringSound)
+    }
+    
+    func playCheeringSound() {
+        AudioServicesPlaySystemSound(cheeringSound)
+    }
+    
+    func loadTimeOutSound() {
+        let path = Bundle.main.path(forResource: "timeOut", ofType: "wav")
+        let soundUrl = URL(fileURLWithPath: path!)
+        AudioServicesCreateSystemSoundID(soundUrl as CFURL, &timeOutSound)
+    }
+    
+    func playTimeOutSound() {
+        AudioServicesPlaySystemSound(timeOutSound)
+    }
     
     func resetButtonsStyle() {
         option1Button.applyBasicStyle()
@@ -115,7 +170,7 @@ class ViewController: UIViewController {
         case 2: buttons += [option1Button, option2Button]
         case 3: buttons += [option1Button, option2Button, option3Button]
         case 4: buttons += [option1Button, option2Button, option3Button, option4Button]
-        default: print("This questions has no answers")
+        default: print("This question has no answers")
         }
         
         for button in buttons {
@@ -143,6 +198,28 @@ class ViewController: UIViewController {
         // Start timer
         timer.start()
         print(timer.secondsRemaining)
+        
+        // Progress bar
+        progressBar.setProgress(timer.secondsRemaining, animated: true)
+    }
+    
+    func highlightCorrectQuestion() {
+        let correctAnswer = self.gameManager.quiz.questions[self.gameManager.indexOfSelectedQuestion].correctAnswer
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.4) {
+            // Play sound
+            self.playWrongSound()
+            
+            // Find the button with the correct answer
+            for button in self.buttons {
+                if button.tag == correctAnswer - 1 {
+                    
+                    // Correct answer button style
+                    button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+                    button.layer.borderColor = UIColor(red: 0.3137, green: 0.8471, blue: 0.5451, alpha: 1.0).cgColor
+                    button.layer.borderWidth = 2
+                }
+            }
+        }
     }
     
     func displayScore() {
@@ -150,6 +227,10 @@ class ViewController: UIViewController {
         playAgainButton.isHidden = false
         
         questionField.text = "Way to go!\nYou got \(gameManager.correctQuestions) out of \(gameManager.questionsPerRound) correct!"
+        
+        if gameManager.correctQuestions == gameManager.questionsPerRound {
+            playCheeringSound()
+        }
     }
     
     func nextRound() {
@@ -176,8 +257,31 @@ class ViewController: UIViewController {
         }
     }
     
+    @objc func handleTimeOver(notification: NSNotification) {
+        questionField.text = "Time Over! ⌛️"
+        questionField.font = UIFont.boldSystemFont(ofSize: 20)
+        highlightCorrectQuestion()
+        
+        // Time reset
+        timer.reset()
+        
+        // call next round
+        loadNextRound(delay: 3)
+    }
+    
+    @objc func handleTimeReset(notification: NSNotification) {
+        progressBar.setProgress(0, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadGameStartSound()
+        loadWrongSound()
+        loadCorrectSound()
+        loadCheeringSound()
+        loadTimeOutSound()
+        playGameStartSound()
         
         displayQuestion()
         
@@ -188,16 +292,10 @@ class ViewController: UIViewController {
         header.applyGradient(colorOne: UIColor(red:0.00, green:0.87, blue:0.84, alpha:1.0), colorTwo: UIColor(red:0.00, green:0.78, blue:0.90, alpha:1.0))
         
         questionTracker.text = "Question \(gameManager.questionsAsked) of \(gameManager.questionsPerRound)"
-        
-        // Progress bar
-        if timer.isOn {
-            progressBar.isHidden = false
-            progressBar.setProgress(timer.secondsRemaining, animated: true)
-        } else {
-            progressBar.setProgress(0, animated: false)
-            progressBar.isHidden = true
-        }
-        
+    
+        // Observers
+        NotificationCenter.default.addObserver(self, selector: #selector(handleTimeOver), name: Notification.Name(rawValue: "timeOver"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleTimeReset), name: Notification.Name(rawValue: "timeReset"), object: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -206,4 +304,4 @@ class ViewController: UIViewController {
     }
     
 }
-
+ 

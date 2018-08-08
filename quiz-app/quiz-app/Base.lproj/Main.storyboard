@@ -105,9 +105,9 @@
                                         </subviews>
                                     </stackView>
                                     <progressView opaque="NO" contentMode="center" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="owL-LB-fQn">
-                                        <rect key="frame" x="0.0" y="-3" width="375" height="9"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="5"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="8" id="qGF-QH-9O3"/>
+                                            <constraint firstAttribute="height" constant="4" id="qGF-QH-9O3"/>
                                         </constraints>
                                         <color key="progressTintColor" red="0.0" green="0.89803922179999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </progressView>
@@ -132,7 +132,7 @@
                                     <constraint firstItem="WLq-Y7-H3i" firstAttribute="centerY" secondItem="yNC-19-Ett" secondAttribute="centerY" id="aIn-aH-1Tk"/>
                                     <constraint firstAttribute="trailing" secondItem="WLq-Y7-H3i" secondAttribute="trailing" constant="16" id="bko-vV-0Wg"/>
                                     <constraint firstAttribute="trailing" secondItem="owL-LB-fQn" secondAttribute="trailing" id="hEz-Ty-hfn"/>
-                                    <constraint firstItem="owL-LB-fQn" firstAttribute="top" secondItem="yNC-19-Ett" secondAttribute="top" constant="-3" id="o85-x1-YQe"/>
+                                    <constraint firstItem="owL-LB-fQn" firstAttribute="top" secondItem="yNC-19-Ett" secondAttribute="top" id="o85-x1-YQe"/>
                                     <constraint firstItem="lcr-Ot-OqI" firstAttribute="leading" secondItem="yNC-19-Ett" secondAttribute="leadingMargin" constant="10" id="sgy-RL-MHO"/>
                                     <constraint firstItem="lcr-Ot-OqI" firstAttribute="centerY" secondItem="yNC-19-Ett" secondAttribute="centerY" id="tO4-Ey-kUu"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="lcr-Ot-OqI" secondAttribute="trailing" constant="10" id="wHG-PD-P7h"/>
