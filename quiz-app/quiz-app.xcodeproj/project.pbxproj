@@ -23,6 +23,7 @@
 		F3C409F22119D96A00A317C1 /* timeOut.wav in Resources */ = {isa = PBXBuildFile; fileRef = F3C409EF2119D96A00A317C1 /* timeOut.wav */; };
 		F3C409F32119D96A00A317C1 /* soundWrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = F3C409F02119D96A00A317C1 /* soundWrong.wav */; };
 		F3DB3A272119E02A0022C47B /* cheerCrowd.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F3DB3A262119E02A0022C47B /* cheerCrowd.mp3 */; };
+		F3DB3A2B211B14C70022C47B /* roundCompleted.wav in Resources */ = {isa = PBXBuildFile; fileRef = F3DB3A2A211B14C70022C47B /* roundCompleted.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		F3C409EF2119D96A00A317C1 /* timeOut.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = timeOut.wav; path = ../../../../../../../../../../Downloads/timeOut.wav; sourceTree = "<group>"; };
 		F3C409F02119D96A00A317C1 /* soundWrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = soundWrong.wav; path = ../../../../../../../../../../Downloads/soundWrong.wav; sourceTree = "<group>"; };
 		F3DB3A262119E02A0022C47B /* cheerCrowd.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = cheerCrowd.mp3; path = ../../../../../../../../../../Downloads/cheerCrowd.mp3; sourceTree = "<group>"; };
+		F3DB3A2A211B14C70022C47B /* roundCompleted.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = roundCompleted.wav; path = ../../../../../../../../../../Downloads/roundCompleted.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				F3C409EC2119D05D00A317C1 /* GameSound.wav */,
 				F3C409EF2119D96A00A317C1 /* timeOut.wav */,
 				F3DB3A262119E02A0022C47B /* cheerCrowd.mp3 */,
+				F3DB3A2A211B14C70022C47B /* roundCompleted.wav */,
 				F3576F852119B28C0099898C /* LaunchScreen.storyboard */,
 				F3576F882119B28C0099898C /* Info.plist */,
 			);
@@ -163,6 +166,7 @@
 				F3C409F12119D96A00A317C1 /* soundCorrect.wav in Resources */,
 				F3576F822119B28A0099898C /* Main.storyboard in Resources */,
 				F3C409F22119D96A00A317C1 /* timeOut.wav in Resources */,
+				F3DB3A2B211B14C70022C47B /* roundCompleted.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

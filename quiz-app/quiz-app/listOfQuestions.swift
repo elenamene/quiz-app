@@ -56,6 +56,26 @@ let UXquestions = [
         question: "What type of wireframes is better for documentation because of their increased level of detail?",
         possibleAnswers: ["Low-fidelity wireframes", "High-fidelity wireframes"],
         correctAnswer: 2),
+    Question(
+        question: "What's the name of the study of the way people perform tasks with existing systems?",
+        possibleAnswers: ["Heuristic evaluation", "Competitor Benchmarking","Task Analysis", "User Journey"],
+        correctAnswer: 3),
+    Question(
+        question: "Sites that change appearance based on the browser environment they are being viewed on, are: ",
+        possibleAnswers: ["Adaptive", "Responsive","All of them"],
+        correctAnswer: 3),
+    Question(
+        question: "Which of the following is not a type of microcontent?",
+        possibleAnswers: ["Page titles", "Email subjects","Taglines", "Articles"],
+        correctAnswer: 4),
+    Question(
+        question: "Research on short-term memory reported that we can only store a few chunks of information. How many?",
+        possibleAnswers: ["3", "5","7"],
+        correctAnswer: 3),
+    Question(
+        question: "Which of the following is not true?",
+        possibleAnswers: ["Toggle switches have a default value", "Switches are used to toggle between two options","With toggles the action is saved once the user hit save button", "Switches are more appropriate for multitouch interactions"],
+        correctAnswer: 3),
 ]
 
 // Visual Design Questions

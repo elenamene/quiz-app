@@ -19,7 +19,9 @@ extension UIButton {
         layer.backgroundColor = UIColor.white.cgColor
         layer.borderWidth = 0
         titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        titleLabel?.textAlignment = NSTextAlignment.center;
         setTitleColor(UIColor(red: 0, green: 0, blue: 0, alpha: 0.9), for: .normal)
+        contentEdgeInsets = UIEdgeInsetsMake(5,5,5,5) 
     }
     
     func applyGradientStyle(colorOne: UIColor, colorTwo: UIColor) {

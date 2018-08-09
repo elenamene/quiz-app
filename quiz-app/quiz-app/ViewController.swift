@@ -9,9 +9,6 @@
 import UIKit
 import AudioToolbox
 
-// global properties
-// let timeOverNotificationKey = "questionTimeOver"
-
 class ViewController: UIViewController {
     
     // MARK: - Properties
@@ -25,10 +22,13 @@ class ViewController: UIViewController {
     var wrongSound: SystemSoundID = 0
     var cheeringSound: SystemSoundID = 0
     var timeOutSound: SystemSoundID = 0
+    var roundCompletedSound: SystemSoundID = 0
     
     // MARK: - Outlets
     
     @IBOutlet weak var header: UIView!
+    @IBOutlet weak var confetti: UIImageView!
+    @IBOutlet weak var grayView: UIView!
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var questionTracker: UILabel!
     @IBOutlet weak var questionField: UILabel!
@@ -42,26 +42,20 @@ class ViewController: UIViewController {
     
     @IBAction func checkANswer(_ sender: UIButton) {
         // Disable all buttons
-        for button in buttons {
-            button.isEnabled = false
-        }
+        disableAllButtons()
         
-        // Feedback message style
+        // Styles
         questionField.font = UIFont.boldSystemFont(ofSize: 20)
-        
-        // Button selected style
         sender.layer.borderColor = UIColor(red:0.00, green:0.83, blue:0.87, alpha:1.0).cgColor
         sender.layer.borderWidth = 2
         
-        // Check the answer selected and display feedback
+        // Check if the answer is correct and display feedback
         if gameManager.isCorrect(sender.tag) {
             questionField.text = "Correct! 🎉"
             playCorrectSound()
             sender.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
         } else {
             questionField.text = "Sorry, that's not it. 😬"
-            
-            // highlight wrong answer
             sender.layer.borderColor = UIColor(red:0.96, green:0.35, blue:0.57, alpha:1.0).cgColor
             
             // Highlight correct answer
@@ -76,18 +70,26 @@ class ViewController: UIViewController {
     }
     
     @IBAction func playAgain(_ sender: UIButton) {
-        // Reset game manager properties to 0
+        // Reset game manager properties
         gameManager.correctQuestions = 0
         gameManager.questionsAsked = 0
        
         // call next round
         nextRound()
         
+        // Change background
+        grayView.backgroundColor = UIColor(red:0.96, green:0.97, blue:0.98, alpha:1.0)
+        
         // play sound
         playGameStartSound()
+        
+        // Stop previous sounds
+        AudioServicesDisposeSystemSoundID(cheeringSound)
     }
     
     // MARK: - Helpers
+    
+    // Sounds
     
     func loadGameStartSound() {
         let path = Bundle.main.path(forResource: "GameSound", ofType: "wav")
@@ -139,12 +141,26 @@ class ViewController: UIViewController {
         AudioServicesPlaySystemSound(timeOutSound)
     }
     
+    func loadRoundCompletedSound() {
+        let path = Bundle.main.path(forResource: "roundCompleted", ofType: "wav")
+        let soundUrl = URL(fileURLWithPath: path!)
+        AudioServicesCreateSystemSoundID(soundUrl as CFURL, &roundCompletedSound)
+    }
+    
+    func playRoundCompletedSound() {
+        AudioServicesPlaySystemSound(roundCompletedSound)
+    }
+    
+    // Buttons
+    
     func resetButtonsStyle() {
         option1Button.applyBasicStyle()
         option2Button.applyBasicStyle()
         option3Button.applyBasicStyle()
         option4Button.applyBasicStyle()
-        
+        playAgainButton.applyBasicStyle()
+        playAgainButton.setTitleColor(UIColor(red:0.00, green:0.78, blue:0.90, alpha:1.0), for: .normal)
+        playAgainButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         questionField.font = UIFont.systemFont(ofSize: 18)
     }
     
@@ -155,8 +171,17 @@ class ViewController: UIViewController {
         option4Button.isHidden = true
     }
     
+    func disableAllButtons() {
+        for button in buttons {
+            button.isEnabled = false
+        }
+    }
+    
+    // Quiz
+    
     func displayAnswers() {
-        // Reset display without any button
+        
+        // Reset display without any buttons
         hideAllButtons()
         resetButtonsStyle()
         buttons = []
@@ -182,6 +207,7 @@ class ViewController: UIViewController {
     }
     
     func displayQuestion() {
+        
         // Select random question
         let questionSelected = gameManager.getRandomQuestion()
         
@@ -195,6 +221,9 @@ class ViewController: UIViewController {
         // HIde play button
         playAgainButton.isHidden = true
         
+        // Hide final score image
+        confetti.isHidden = true
+        
         // Start timer
         timer.start()
         print(timer.secondsRemaining)
@@ -205,7 +234,9 @@ class ViewController: UIViewController {
     
     func highlightCorrectQuestion() {
         let correctAnswer = self.gameManager.quiz.questions[self.gameManager.indexOfSelectedQuestion].correctAnswer
+        
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.4) {
+            
             // Play sound
             self.playWrongSound()
             
@@ -213,7 +244,7 @@ class ViewController: UIViewController {
             for button in self.buttons {
                 if button.tag == correctAnswer - 1 {
                     
-                    // Correct answer button style
+                    // Button style
                     button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
                     button.layer.borderColor = UIColor(red: 0.3137, green: 0.8471, blue: 0.5451, alpha: 1.0).cgColor
                     button.layer.borderWidth = 2
@@ -225,11 +256,15 @@ class ViewController: UIViewController {
     func displayScore() {
         hideAllButtons()
         playAgainButton.isHidden = false
+        confetti.isHidden = false
+        grayView.backgroundColor = UIColor(red:0.00, green:0.78, blue:0.90, alpha:1.0)
         
         questionField.text = "Way to go!\nYou got \(gameManager.correctQuestions) out of \(gameManager.questionsPerRound) correct!"
         
         if gameManager.correctQuestions == gameManager.questionsPerRound {
             playCheeringSound()
+        } else {
+            playRoundCompletedSound()
         }
     }
     
@@ -261,6 +296,7 @@ class ViewController: UIViewController {
         questionField.text = "Time Over! ⌛️"
         questionField.font = UIFont.boldSystemFont(ofSize: 20)
         highlightCorrectQuestion()
+        disableAllButtons()
         
         // Time reset
         timer.reset()
@@ -281,14 +317,12 @@ class ViewController: UIViewController {
         loadCorrectSound()
         loadCheeringSound()
         loadTimeOutSound()
+        loadRoundCompletedSound()
         playGameStartSound()
         
         displayQuestion()
         
-        // Buttons styles
-        playAgainButton.applyGradientStyle(colorOne: UIColor(red:0.00, green:0.87, blue:0.84, alpha:0.5), colorTwo: UIColor(red:0.00, green:0.78, blue:0.90, alpha:1.0))
-        
-        // Header style
+        // Styles
         header.applyGradient(colorOne: UIColor(red:0.00, green:0.87, blue:0.84, alpha:1.0), colorTwo: UIColor(red:0.00, green:0.78, blue:0.90, alpha:1.0))
         
         questionTracker.text = "Question \(gameManager.questionsAsked) of \(gameManager.questionsPerRound)"
@@ -304,4 +338,3 @@ class ViewController: UIViewController {
     }
     
 }
- 
