@@ -18,12 +18,12 @@
 		F38FBCBA2119B97F004EFAB8 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38FBCB92119B97F004EFAB8 /* GameManager.swift */; };
 		F38FBCBC2119B994004EFAB8 /* QuestionTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38FBCBB2119B994004EFAB8 /* QuestionTimer.swift */; };
 		F38FBCC02119B9DB004EFAB8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38FBCBF2119B9DB004EFAB8 /* Extensions.swift */; };
-		F3C409ED2119D05D00A317C1 /* GameSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = F3C409EC2119D05D00A317C1 /* GameSound.wav */; };
-		F3C409F12119D96A00A317C1 /* soundCorrect.wav in Resources */ = {isa = PBXBuildFile; fileRef = F3C409EE2119D96A00A317C1 /* soundCorrect.wav */; };
-		F3C409F22119D96A00A317C1 /* timeOut.wav in Resources */ = {isa = PBXBuildFile; fileRef = F3C409EF2119D96A00A317C1 /* timeOut.wav */; };
-		F3C409F32119D96A00A317C1 /* soundWrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = F3C409F02119D96A00A317C1 /* soundWrong.wav */; };
-		F3DB3A272119E02A0022C47B /* cheerCrowd.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F3DB3A262119E02A0022C47B /* cheerCrowd.mp3 */; };
-		F3DB3A2B211B14C70022C47B /* roundCompleted.wav in Resources */ = {isa = PBXBuildFile; fileRef = F3DB3A2A211B14C70022C47B /* roundCompleted.wav */; };
+		F3BB1F12211C34F10022D65E /* soundCorrect.wav in Resources */ = {isa = PBXBuildFile; fileRef = F3BB1F0C211C34F10022D65E /* soundCorrect.wav */; };
+		F3BB1F13211C34F10022D65E /* cheerCrowd.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F3BB1F0D211C34F10022D65E /* cheerCrowd.mp3 */; };
+		F3BB1F14211C34F10022D65E /* GameSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = F3BB1F0E211C34F10022D65E /* GameSound.wav */; };
+		F3BB1F15211C34F10022D65E /* roundCompleted.wav in Resources */ = {isa = PBXBuildFile; fileRef = F3BB1F0F211C34F10022D65E /* roundCompleted.wav */; };
+		F3BB1F16211C34F10022D65E /* soundWrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = F3BB1F10211C34F10022D65E /* soundWrong.wav */; };
+		F3BB1F17211C34F10022D65E /* timeOut.wav in Resources */ = {isa = PBXBuildFile; fileRef = F3BB1F11211C34F10022D65E /* timeOut.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,12 +40,12 @@
 		F38FBCB92119B97F004EFAB8 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		F38FBCBB2119B994004EFAB8 /* QuestionTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTimer.swift; sourceTree = "<group>"; };
 		F38FBCBF2119B9DB004EFAB8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		F3C409EC2119D05D00A317C1 /* GameSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = GameSound.wav; path = ../../../../../../../../../../Downloads/EnhanceQuizStarter/EnhanceQuizStarter/GameSound.wav; sourceTree = "<group>"; };
-		F3C409EE2119D96A00A317C1 /* soundCorrect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = soundCorrect.wav; path = ../../../../../../../../../../Downloads/soundCorrect.wav; sourceTree = "<group>"; };
-		F3C409EF2119D96A00A317C1 /* timeOut.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = timeOut.wav; path = ../../../../../../../../../../Downloads/timeOut.wav; sourceTree = "<group>"; };
-		F3C409F02119D96A00A317C1 /* soundWrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = soundWrong.wav; path = ../../../../../../../../../../Downloads/soundWrong.wav; sourceTree = "<group>"; };
-		F3DB3A262119E02A0022C47B /* cheerCrowd.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = cheerCrowd.mp3; path = ../../../../../../../../../../Downloads/cheerCrowd.mp3; sourceTree = "<group>"; };
-		F3DB3A2A211B14C70022C47B /* roundCompleted.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = roundCompleted.wav; path = ../../../../../../../../../../Downloads/roundCompleted.wav; sourceTree = "<group>"; };
+		F3BB1F0C211C34F10022D65E /* soundCorrect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = soundCorrect.wav; sourceTree = "<group>"; };
+		F3BB1F0D211C34F10022D65E /* cheerCrowd.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cheerCrowd.mp3; sourceTree = "<group>"; };
+		F3BB1F0E211C34F10022D65E /* GameSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = GameSound.wav; sourceTree = "<group>"; };
+		F3BB1F0F211C34F10022D65E /* roundCompleted.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = roundCompleted.wav; sourceTree = "<group>"; };
+		F3BB1F10211C34F10022D65E /* soundWrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = soundWrong.wav; sourceTree = "<group>"; };
+		F3BB1F11211C34F10022D65E /* timeOut.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = timeOut.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,12 +88,12 @@
 				F38FBCB32119B931004EFAB8 /* listOfQuestions.swift */,
 				F38FBCBB2119B994004EFAB8 /* QuestionTimer.swift */,
 				F38FBCBF2119B9DB004EFAB8 /* Extensions.swift */,
-				F3C409EE2119D96A00A317C1 /* soundCorrect.wav */,
-				F3C409F02119D96A00A317C1 /* soundWrong.wav */,
-				F3C409EC2119D05D00A317C1 /* GameSound.wav */,
-				F3C409EF2119D96A00A317C1 /* timeOut.wav */,
-				F3DB3A262119E02A0022C47B /* cheerCrowd.mp3 */,
-				F3DB3A2A211B14C70022C47B /* roundCompleted.wav */,
+				F3BB1F0D211C34F10022D65E /* cheerCrowd.mp3 */,
+				F3BB1F0E211C34F10022D65E /* GameSound.wav */,
+				F3BB1F0F211C34F10022D65E /* roundCompleted.wav */,
+				F3BB1F0C211C34F10022D65E /* soundCorrect.wav */,
+				F3BB1F10211C34F10022D65E /* soundWrong.wav */,
+				F3BB1F11211C34F10022D65E /* timeOut.wav */,
 				F3576F852119B28C0099898C /* LaunchScreen.storyboard */,
 				F3576F882119B28C0099898C /* Info.plist */,
 			);
@@ -158,15 +158,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3DB3A272119E02A0022C47B /* cheerCrowd.mp3 in Resources */,
-				F3C409ED2119D05D00A317C1 /* GameSound.wav in Resources */,
+				F3BB1F16211C34F10022D65E /* soundWrong.wav in Resources */,
+				F3BB1F17211C34F10022D65E /* timeOut.wav in Resources */,
 				F3576F872119B28C0099898C /* LaunchScreen.storyboard in Resources */,
 				F3576F842119B28C0099898C /* Assets.xcassets in Resources */,
-				F3C409F32119D96A00A317C1 /* soundWrong.wav in Resources */,
-				F3C409F12119D96A00A317C1 /* soundCorrect.wav in Resources */,
+				F3BB1F15211C34F10022D65E /* roundCompleted.wav in Resources */,
 				F3576F822119B28A0099898C /* Main.storyboard in Resources */,
-				F3C409F22119D96A00A317C1 /* timeOut.wav in Resources */,
-				F3DB3A2B211B14C70022C47B /* roundCompleted.wav in Resources */,
+				F3BB1F12211C34F10022D65E /* soundCorrect.wav in Resources */,
+				F3BB1F14211C34F10022D65E /* GameSound.wav in Resources */,
+				F3BB1F13211C34F10022D65E /* cheerCrowd.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

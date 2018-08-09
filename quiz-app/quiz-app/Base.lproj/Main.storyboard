@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -17,26 +17,26 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="quiz_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yrW-M9-siX">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="324.66666666666669"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HyL-nV-iRF">
-                                        <rect key="frame" x="18" y="38" width="339" height="211"/>
+                                        <rect key="frame" x="18" y="61.999999999999986" width="339" height="244.66666666666663"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="V9A-Jr-Gr6">
-                                                <rect key="frame" x="124" y="0.0" width="91.5" height="43"/>
+                                                <rect key="frame" x="124" y="0.0" width="91.333333333333314" height="44"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UX Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIa-ad-Zav">
-                                                        <rect key="frame" x="0.0" y="0.0" width="91.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="91.333333333333329" height="21.666666666666668"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 1 of 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1S-oU-XTs">
-                                                        <rect key="frame" x="0.0" y="28.5" width="91.5" height="14.5"/>
+                                                        <rect key="frame" x="0.0" y="29.666666666666668" width="91.333333333333329" height="14.333333333333332"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -44,7 +44,7 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's the best research method if you want to to observe users in their natural environment?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="t61-hM-hUE">
-                                                <rect key="frame" x="16" y="43" width="307" height="168"/>
+                                                <rect key="frame" x="16" y="43.999999999999986" width="307" height="200.66666666666663"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -65,22 +65,22 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNC-19-Ett">
-                                <rect key="frame" x="0.0" y="267" width="375" height="400"/>
+                                <rect key="frame" x="0.0" y="324.66666666666674" width="375" height="487.33333333333326"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lcr-Ot-OqI">
-                                        <rect key="frame" x="18" y="40" width="339" height="320"/>
+                                        <rect key="frame" x="18" y="49" width="339" height="389.66666666666669"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="rhJ-kO-YKZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="339" height="65"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="339" height="82.333333333333329"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                                <state key="normal" title="Option 1 Option 1 Option 1 Option 1 Option 1 Option 1 Option 1 Option 1 Option 1 Option 1 Option 1 Option 1"/>
+                                                <state key="normal" title="Option 1"/>
                                                 <connections>
                                                     <action selector="checkANswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="frH-TH-Thi"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="JBa-6f-z6r">
-                                                <rect key="frame" x="0.0" y="85" width="339" height="65"/>
+                                                <rect key="frame" x="0.0" y="102.33333333333331" width="339" height="82.666666666666686"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Option 2"/>
                                                 <connections>
@@ -88,7 +88,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="JP9-iV-twW">
-                                                <rect key="frame" x="0.0" y="170" width="339" height="65"/>
+                                                <rect key="frame" x="0.0" y="204.99999999999994" width="339" height="82.333333333333314"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Option 3"/>
                                                 <connections>
@@ -96,7 +96,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="TeD-2F-x7R">
-                                                <rect key="frame" x="0.0" y="255" width="339" height="65"/>
+                                                <rect key="frame" x="0.0" y="307.33333333333331" width="339" height="82.333333333333314"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Option 4"/>
                                                 <connections>
@@ -113,10 +113,10 @@
                                         <color key="progressTintColor" red="0.0" green="0.89803922179999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </progressView>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="confetti" translatesAutoresizingMaskIntoConstraints="NO" id="4GO-Eh-OE2">
-                                        <rect key="frame" x="0.0" y="-247" width="375" height="667"/>
+                                        <rect key="frame" x="0.0" y="-280.66666666666669" width="375" height="667"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLq-Y7-H3i">
-                                        <rect key="frame" x="16" y="172" width="343" height="56"/>
+                                        <rect key="frame" x="16" y="215.66666666666669" width="343" height="56"/>
                                         <color key="backgroundColor" red="0.30196079609999998" green="0.8156862855" blue="0.88235294819999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="MV6-jA-cDa"/>
