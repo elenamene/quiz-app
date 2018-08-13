@@ -8,7 +8,7 @@
 
 import Foundation
 
-class questionTimer {
+class QuestionTimer {
     var timer = Timer()
     var secondsRemaining: Float = 15
     var isOn = false

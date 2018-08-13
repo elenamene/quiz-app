@@ -11,19 +11,6 @@ import AudioToolbox
 
 class ViewController: UIViewController {
     
-    // MARK: - Properties
-    
-    let gameManager = GameManager()
-    let timer = questionTimer()
-    var buttons = [UIButton]()
-    
-    var gameSound: SystemSoundID = 0
-    var correctSound: SystemSoundID = 0
-    var wrongSound: SystemSoundID = 0
-    var cheeringSound: SystemSoundID = 0
-    var timeOutSound: SystemSoundID = 0
-    var roundCompletedSound: SystemSoundID = 0
-    
     // MARK: - Outlets
     
     @IBOutlet weak var header: UIView!
@@ -38,9 +25,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var option4Button: UIButton!
     @IBOutlet weak var playAgainButton: UIButton!
     
+    // MARK: - Properties
+    
+    let gameManager = GameManager()
+    let timer = QuestionTimer()
+    let soundPlayer = SoundPlayer()
+    var buttons = [UIButton]()
+    
     // MARK: - Actions
     
-    @IBAction func checkANswer(_ sender: UIButton) {
+    @IBAction func checkAnswer(_ sender: UIButton) {
         // Disable all buttons
         disableAllButtons()
         
@@ -52,7 +46,7 @@ class ViewController: UIViewController {
         // Check if the answer is correct and display feedback
         if gameManager.isCorrect(sender.tag) {
             questionField.text = "Correct! 🎉"
-            playCorrectSound()
+            soundPlayer.play(soundPlayer.soundProvider.correctSound)
             sender.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
         } else {
             questionField.text = "Sorry, that's not it. 😬"
@@ -81,76 +75,11 @@ class ViewController: UIViewController {
         grayView.backgroundColor = UIColor(red:0.96, green:0.97, blue:0.98, alpha:1.0)
         
         // play sound
-        playGameStartSound()
-        
-        // Stop previous sounds
-        AudioServicesDisposeSystemSoundID(cheeringSound)
+        soundPlayer.play(soundPlayer.soundProvider.startGameSound)
     }
     
     // MARK: - Helpers
-    
-    // Sounds
-    
-    func loadGameStartSound() {
-        let path = Bundle.main.path(forResource: "GameSound", ofType: "wav")
-        let soundUrl = URL(fileURLWithPath: path!)
-        AudioServicesCreateSystemSoundID(soundUrl as CFURL, &gameSound)
-    }
-    
-    func playGameStartSound() {
-        AudioServicesPlaySystemSound(gameSound)
-    }
-    
-    func loadCorrectSound() {
-        let path = Bundle.main.path(forResource: "soundCorrect", ofType: "wav")
-        let soundUrl = URL(fileURLWithPath: path!)
-        AudioServicesCreateSystemSoundID(soundUrl as CFURL, &correctSound)
-    }
-    
-    func playCorrectSound() {
-        AudioServicesPlaySystemSound(correctSound)
-    }
-    
-    func loadWrongSound() {
-        let path = Bundle.main.path(forResource: "soundWrong", ofType: "wav")
-        let soundUrl = URL(fileURLWithPath: path!)
-        AudioServicesCreateSystemSoundID(soundUrl as CFURL, &wrongSound)
-    }
-    
-    func playWrongSound() {
-        AudioServicesPlaySystemSound(wrongSound)
-    }
-    
-    func loadCheeringSound() {
-        let path = Bundle.main.path(forResource: "cheerCrowd", ofType: "mp3")
-        let soundUrl = URL(fileURLWithPath: path!)
-        AudioServicesCreateSystemSoundID(soundUrl as CFURL, &cheeringSound)
-    }
-    
-    func playCheeringSound() {
-        AudioServicesPlaySystemSound(cheeringSound)
-    }
-    
-    func loadTimeOutSound() {
-        let path = Bundle.main.path(forResource: "timeOut", ofType: "wav")
-        let soundUrl = URL(fileURLWithPath: path!)
-        AudioServicesCreateSystemSoundID(soundUrl as CFURL, &timeOutSound)
-    }
-    
-    func playTimeOutSound() {
-        AudioServicesPlaySystemSound(timeOutSound)
-    }
-    
-    func loadRoundCompletedSound() {
-        let path = Bundle.main.path(forResource: "roundCompleted", ofType: "wav")
-        let soundUrl = URL(fileURLWithPath: path!)
-        AudioServicesCreateSystemSoundID(soundUrl as CFURL, &roundCompletedSound)
-    }
-    
-    func playRoundCompletedSound() {
-        AudioServicesPlaySystemSound(roundCompletedSound)
-    }
-    
+
     // Buttons
     
     func resetButtonsStyle() {
@@ -238,7 +167,7 @@ class ViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.4) {
             
             // Play sound
-            self.playWrongSound()
+            self.soundPlayer.play(self.soundPlayer.soundProvider.wrongSound)
             
             // Find the button with the correct answer
             for button in self.buttons {
@@ -262,9 +191,9 @@ class ViewController: UIViewController {
         questionField.text = "Way to go!\nYou got \(gameManager.correctQuestions) out of \(gameManager.questionsPerRound) correct!"
         
         if gameManager.correctQuestions == gameManager.questionsPerRound {
-            playCheeringSound()
+            soundPlayer.play(soundPlayer.soundProvider.cheeringSound)
         } else {
-            playRoundCompletedSound()
+            soundPlayer.play(soundPlayer.soundProvider.roundCompleteSound)
         }
     }
     
@@ -311,16 +240,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        loadGameStartSound()
-        loadWrongSound()
-        loadCorrectSound()
-        loadCheeringSound()
-        loadTimeOutSound()
-        loadRoundCompletedSound()
-        playGameStartSound()
-        
         displayQuestion()
+        soundPlayer.play(soundPlayer.soundProvider.startGameSound)
         
         // Styles
         header.applyGradient(colorOne: UIColor(red:0.00, green:0.87, blue:0.84, alpha:1.0), colorTwo: UIColor(red:0.00, green:0.78, blue:0.90, alpha:1.0))

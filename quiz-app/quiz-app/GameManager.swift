@@ -13,7 +13,7 @@ import GameKit
 
 
 class GameManager {
-    var quiz = Quiz(with: UXquestions)
+    var quiz = Quiz()
     var questionsPerRound = 5
     var questionsAsked = 0
     var correctQuestions = 0
