@@ -10,16 +10,17 @@
 		F31B4F01211DBDEF00197F45 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31B4F00211DBDEF00197F45 /* Sound.swift */; };
 		F31B4F04211DCECB00197F45 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31B4F03211DCECB00197F45 /* SoundPlayer.swift */; };
 		F31B4F06211DDA4200197F45 /* SoundProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31B4F05211DDA4200197F45 /* SoundProvider.swift */; };
+		F3291E3A220C83EE000EF213 /* UIVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3291E39220C83EE000EF213 /* UIVIew.swift */; };
 		F3576F7D2119B28A0099898C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3576F7C2119B28A0099898C /* AppDelegate.swift */; };
 		F3576F7F2119B28A0099898C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3576F7E2119B28A0099898C /* ViewController.swift */; };
 		F3576F822119B28A0099898C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3576F802119B28A0099898C /* Main.storyboard */; };
 		F3576F842119B28C0099898C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3576F832119B28C0099898C /* Assets.xcassets */; };
 		F3576F872119B28C0099898C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3576F852119B28C0099898C /* LaunchScreen.storyboard */; };
 		F38FBCB62119B950004EFAB8 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38FBCB52119B950004EFAB8 /* Question.swift */; };
-		F38FBCB82119B95B004EFAB8 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38FBCB72119B95B004EFAB8 /* Quiz.swift */; };
+		F38FBCB82119B95B004EFAB8 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38FBCB72119B95B004EFAB8 /* Questions.swift */; };
 		F38FBCBA2119B97F004EFAB8 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38FBCB92119B97F004EFAB8 /* GameManager.swift */; };
 		F38FBCBC2119B994004EFAB8 /* QuestionTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38FBCBB2119B994004EFAB8 /* QuestionTimer.swift */; };
-		F38FBCC02119B9DB004EFAB8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38FBCBF2119B9DB004EFAB8 /* Extensions.swift */; };
+		F38FBCC02119B9DB004EFAB8 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38FBCBF2119B9DB004EFAB8 /* UIButton.swift */; };
 		F3BB1F12211C34F10022D65E /* soundCorrect.wav in Resources */ = {isa = PBXBuildFile; fileRef = F3BB1F0C211C34F10022D65E /* soundCorrect.wav */; };
 		F3BB1F13211C34F10022D65E /* cheerCrowd.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F3BB1F0D211C34F10022D65E /* cheerCrowd.mp3 */; };
 		F3BB1F14211C34F10022D65E /* gameSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = F3BB1F0E211C34F10022D65E /* gameSound.wav */; };
@@ -32,6 +33,7 @@
 		F31B4F00211DBDEF00197F45 /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		F31B4F03211DCECB00197F45 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		F31B4F05211DDA4200197F45 /* SoundProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundProvider.swift; sourceTree = "<group>"; };
+		F3291E39220C83EE000EF213 /* UIVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVIew.swift; sourceTree = "<group>"; };
 		F3576F792119B28A0099898C /* quiz-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "quiz-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3576F7C2119B28A0099898C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3576F7E2119B28A0099898C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,10 +42,10 @@
 		F3576F862119B28C0099898C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3576F882119B28C0099898C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F38FBCB52119B950004EFAB8 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		F38FBCB72119B95B004EFAB8 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		F38FBCB72119B95B004EFAB8 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		F38FBCB92119B97F004EFAB8 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		F38FBCBB2119B994004EFAB8 /* QuestionTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTimer.swift; sourceTree = "<group>"; };
-		F38FBCBF2119B9DB004EFAB8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F38FBCBF2119B9DB004EFAB8 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		F3BB1F0C211C34F10022D65E /* soundCorrect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = soundCorrect.wav; sourceTree = "<group>"; };
 		F3BB1F0D211C34F10022D65E /* cheerCrowd.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cheerCrowd.mp3; sourceTree = "<group>"; };
 		F3BB1F0E211C34F10022D65E /* gameSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gameSound.wav; sourceTree = "<group>"; };
@@ -66,6 +68,44 @@
 		F31B4F02211DC4BE00197F45 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F3291E35220B4367000EF213 /* Sounds */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F3291E32220B3FF8000EF213 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F3291E33220B410D000EF213 /* Audio */,
+				F3291E34220B4133000EF213 /* Quiz */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F3291E33220B410D000EF213 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				F31B4F00211DBDEF00197F45 /* Sound.swift */,
+				F31B4F05211DDA4200197F45 /* SoundProvider.swift */,
+				F31B4F03211DCECB00197F45 /* SoundPlayer.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		F3291E34220B4133000EF213 /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				F38FBCB52119B950004EFAB8 /* Question.swift */,
+				F38FBCB72119B95B004EFAB8 /* Questions.swift */,
+				F38FBCB92119B97F004EFAB8 /* GameManager.swift */,
+				F38FBCBB2119B994004EFAB8 /* QuestionTimer.swift */,
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
+		F3291E35220B4367000EF213 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
 				F3BB1F0D211C34F10022D65E /* cheerCrowd.mp3 */,
 				F3BB1F0E211C34F10022D65E /* gameSound.wav */,
 				F3BB1F0F211C34F10022D65E /* roundCompleted.wav */,
@@ -73,7 +113,35 @@
 				F3BB1F10211C34F10022D65E /* soundWrong.wav */,
 				F3BB1F11211C34F10022D65E /* timeOut.wav */,
 			);
-			path = Resources;
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		F3291E36220B4382000EF213 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F3576F852119B28C0099898C /* LaunchScreen.storyboard */,
+				F3576F882119B28C0099898C /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F3291E37220B43A0000EF213 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F3576F802119B28A0099898C /* Main.storyboard */,
+				F38FBCBF2119B9DB004EFAB8 /* UIButton.swift */,
+				F3291E39220C83EE000EF213 /* UIVIew.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F3291E38220B43C9000EF213 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F3576F7C2119B28A0099898C /* AppDelegate.swift */,
+				F3576F7E2119B28A0099898C /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		F3576F702119B28A0099898C = {
@@ -95,21 +163,12 @@
 		F3576F7B2119B28A0099898C /* quiz-app */ = {
 			isa = PBXGroup;
 			children = (
-				F3576F7C2119B28A0099898C /* AppDelegate.swift */,
-				F3576F7E2119B28A0099898C /* ViewController.swift */,
-				F38FBCB52119B950004EFAB8 /* Question.swift */,
-				F38FBCB72119B95B004EFAB8 /* Quiz.swift */,
-				F38FBCB92119B97F004EFAB8 /* GameManager.swift */,
-				F38FBCBB2119B994004EFAB8 /* QuestionTimer.swift */,
-				F38FBCBF2119B9DB004EFAB8 /* Extensions.swift */,
-				F3576F802119B28A0099898C /* Main.storyboard */,
+				F3291E32220B3FF8000EF213 /* Models */,
+				F3291E37220B43A0000EF213 /* Views */,
+				F3291E38220B43C9000EF213 /* Controllers */,
 				F31B4F02211DC4BE00197F45 /* Resources */,
-				F31B4F00211DBDEF00197F45 /* Sound.swift */,
-				F31B4F05211DDA4200197F45 /* SoundProvider.swift */,
-				F31B4F03211DCECB00197F45 /* SoundPlayer.swift */,
 				F3576F832119B28C0099898C /* Assets.xcassets */,
-				F3576F852119B28C0099898C /* LaunchScreen.storyboard */,
-				F3576F882119B28C0099898C /* Info.plist */,
+				F3291E36220B4382000EF213 /* Supporting Files */,
 			);
 			path = "quiz-app";
 			sourceTree = "<group>";
@@ -146,6 +205,7 @@
 				TargetAttributes = {
 					F3576F782119B28A0099898C = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -193,8 +253,9 @@
 			files = (
 				F3576F7F2119B28A0099898C /* ViewController.swift in Sources */,
 				F38FBCBA2119B97F004EFAB8 /* GameManager.swift in Sources */,
-				F38FBCB82119B95B004EFAB8 /* Quiz.swift in Sources */,
-				F38FBCC02119B9DB004EFAB8 /* Extensions.swift in Sources */,
+				F3291E3A220C83EE000EF213 /* UIVIew.swift in Sources */,
+				F38FBCB82119B95B004EFAB8 /* Questions.swift in Sources */,
+				F38FBCC02119B9DB004EFAB8 /* UIButton.swift in Sources */,
 				F38FBCB62119B950004EFAB8 /* Question.swift in Sources */,
 				F38FBCBC2119B994004EFAB8 /* QuestionTimer.swift in Sources */,
 				F31B4F06211DDA4200197F45 /* SoundProvider.swift in Sources */,
@@ -346,14 +407,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7MA4G9ZS6S;
-				INFOPLIST_FILE = "quiz-app/Info.plist";
+				INFOPLIST_FILE = "quiz-app/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "elenameneghini.com.quiz-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -364,14 +425,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7MA4G9ZS6S;
-				INFOPLIST_FILE = "quiz-app/Info.plist";
+				INFOPLIST_FILE = "quiz-app/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "elenameneghini.com.quiz-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

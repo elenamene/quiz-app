@@ -6,9 +6,9 @@
 //  Copyright © 2018 Elena Meneghini. All rights reserved.
 //
 
-struct Quiz {
-    // User Experience Questions
-    let questions = [
+// Provide random questions
+struct Questions {
+    let list = [
         Question(
             question: "What's the percentage of accessibility issues related to blindness?",
             possibleAnswers: ["35%", "55%", "80%", "90%"],
