@@ -20,16 +20,16 @@ Game includes a lightning mode with 15 seconds countdown timer for each question
 
 ### Extra Credit
 
-1. Implement a feature so that the app can neatly display a mix of 3-option questions as well as 4-option questions. Inactive buttons should be spaced or resized appropriately, not simply hidden, disabled, or marked as unused (e.g. with the string ‘N/A’). You need to implement this feature using only one view controller.
+6. Implement a feature so that the app can neatly display a mix of 3-option questions as well as 4-option questions. Inactive buttons should be spaced or resized appropriately, not simply hidden, disabled, or marked as unused (e.g. with the string ‘N/A’). You need to implement this feature using only one view controller.
 
-2. Implement a way to appropriately display the correct answer, when a player answers incorrectly.
+7. Implement a way to appropriately display the correct answer, when a player answers incorrectly.
 
-3. Modify the app to be in "lightning" mode where users only have 15 seconds to select an answer for each question. Display the number of correct answers at the end of the quiz.
+8. Modify the app to be in "lightning" mode where users only have 15 seconds to select an answer for each question. Display the number of correct answers at the end of the quiz.
 
-4. Add two sound effects, one for correct answers and one for incorrect. You may also add sounds at the end of the game, or wherever else you see fit.
+9. Add two sound effects, one for correct answers and one for incorrect. You may also add sounds at the end of the game, or wherever else you see fit.
 
 ### Personal Enhancements
 
-1. Added styling to all buttons
+* Added styling to all buttons
 
-2. Added progress bar to keep track of the time left in "lightning" mode
+* Added progress bar to keep track of the time left in "lightning" mode
