@@ -32,6 +32,6 @@ Game includes a lightning mode with 15 seconds countdown timer for each question
 
 ### Personal Enhancements
 
-* Added styling to all buttons
+* Added style to all buttons
 
 * Added progress bar to keep track of the time left in "lightning" mode
